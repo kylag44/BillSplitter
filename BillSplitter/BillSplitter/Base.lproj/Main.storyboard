@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k0t-K4-0wj">
+                                <rect key="frame" x="18" y="78" width="339" height="31"/>
+                                <color key="backgroundColor" red="0.76750735069999998" green="0.68095413299999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.68225641690000005" green="0.99397208120000002" blue="0.58171286619999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fcq-yV-JKb"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEl-h3-w7l">
+                                <rect key="frame" x="20" y="116" width="335" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.79817549239999996" blue="0.28943611450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Calculate Bill"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VNa-PF-Yxy"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cii-8u-8T5">
+                                <rect key="frame" x="20" y="154" width="335" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of People" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-2z-LCq">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.68225641685253124" green="0.99397208121827407" blue="0.58171286616792806" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="3FF-20-M5z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Bill Amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6e9-d4-a5C">
+                                <rect key="frame" x="20" y="40" width="335" height="30"/>
+                                <color key="backgroundColor" red="0.49706778019999998" green="0.88235294119999996" blue="0.84265939749999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cii-8u-8T5" firstAttribute="top" secondItem="hEl-h3-w7l" secondAttribute="bottom" constant="8" id="2uK-Yn-Nyx"/>
+                            <constraint firstItem="hEl-h3-w7l" firstAttribute="width" secondItem="k0t-K4-0wj" secondAttribute="width" id="3u2-TT-dZU"/>
+                            <constraint firstItem="6e9-d4-a5C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4IO-fX-owX"/>
+                            <constraint firstItem="k0t-K4-0wj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5bz-ta-Tcv"/>
+                            <constraint firstItem="hEl-h3-w7l" firstAttribute="top" secondItem="k0t-K4-0wj" secondAttribute="bottom" constant="8" id="97V-2J-qtx"/>
+                            <constraint firstItem="k0t-K4-0wj" firstAttribute="top" secondItem="6e9-d4-a5C" secondAttribute="bottom" constant="8" id="MUw-P4-q6b"/>
+                            <constraint firstItem="cii-8u-8T5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z9q-pm-Lne"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6e9-d4-a5C" secondAttribute="trailing" constant="20" id="byD-dM-3qK"/>
+                            <constraint firstItem="k0t-K4-0wj" firstAttribute="width" secondItem="6e9-d4-a5C" secondAttribute="width" id="d7d-0Q-UAR"/>
+                            <constraint firstItem="6e9-d4-a5C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRT-8h-rmk"/>
+                            <constraint firstItem="6e9-d4-a5C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wGi-ic-OTE"/>
+                            <constraint firstItem="BBR-2z-LCq" firstAttribute="width" secondItem="hEl-h3-w7l" secondAttribute="width" id="xib-Iu-rp8"/>
+                            <constraint firstItem="hEl-h3-w7l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3P-rd-eEp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myButton" destination="hEl-h3-w7l" id="JCf-So-mdq"/>
+                        <outlet property="myLabel" destination="BBR-2z-LCq" id="2mQ-4o-YUC"/>
+                        <outlet property="mySlider" destination="k0t-K4-0wj" id="w2q-Rd-08O"/>
+                        <outlet property="myTextField" destination="6e9-d4-a5C" id="SW2-RH-Z0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
